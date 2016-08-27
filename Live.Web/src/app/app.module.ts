@@ -9,6 +9,7 @@ import { ActionCreatorsModule } from "./action-creators";
 import { ComponentsModule } from "./components";
 import { RoutingModule } from "./routing";
 import { ServicesModule } from "./services";
+import { StoreModule } from "./store";
 
 const declarables = [AppComponent]
 
@@ -20,7 +21,8 @@ const declarables = [AppComponent]
         ActionCreatorsModule,
         ComponentsModule,
         RoutingModule,
-        ServicesModule
+        ServicesModule,
+        StoreModule
     ],
     declarations: [declarables],
     exports: [declarables],
