@@ -1,1 +1,1 @@
-﻿
+﻿export * from "./routing.module";
