@@ -6,7 +6,8 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion></ProductVersion>
+    <ProductVersion>
+    </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{658DA84D-AD6C-414A-9333-B89232911187}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
@@ -21,7 +22,8 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <NuGetPackageImportStamp></NuGetPackageImportStamp>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
     <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
     <TypeScriptEmitDecoratorMetadata>true</TypeScriptEmitDecoratorMetadata>
     <TypeScriptModuleKind>commonjs</TypeScriptModuleKind>
@@ -204,6 +206,12 @@
     <Content Include="src\app\app.component.scss">
       <DependentUpon>app.component.ts</DependentUpon>
     </Content>
+    <Content Include="src\app\components\add-book-form.component.html">
+      <DependentUpon>add-book-form.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\add-book-form.component.scss">
+      <DependentUpon>add-book-form.component.ts</DependentUpon>
+    </Content>
     <Content Include="src\app\components\book-detail.component.html">
       <DependentUpon>book-detail.component.ts</DependentUpon>
     </Content>
@@ -215,6 +223,18 @@
     </Content>
     <Content Include="src\app\components\book-list.component.scss">
       <DependentUpon>book-list.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\nav.component.html">
+      <DependentUpon>nav.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\nav.component.scss">
+      <DependentUpon>nav.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\add-book-page.component.html">
+      <DependentUpon>add-book-page.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\pages\add-book-page.component.scss">
+      <DependentUpon>add-book-page.component.ts</DependentUpon>
     </Content>
     <Content Include="src\app\pages\book-detail-page.component.html">
       <DependentUpon>book-detail-page.component.ts</DependentUpon>
@@ -284,7 +304,8 @@
           <IISUrl>http://localhost:56622/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl></CustomServerUrl>
+          <CustomServerUrl>
+          </CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
@@ -312,6 +333,9 @@
       <DependentUpon>app.component.ts</DependentUpon>
     </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\app.component.ts" />
+    <TypeScriptCompile Include="src\app\components\add-book-form.component.spec.ts">
+      <DependentUpon>add-book-form.component.ts</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\components\book-detail.component.spec.ts">
       <DependentUpon>book-detail.component.ts</DependentUpon>
     </TypeScriptCompile>
@@ -319,6 +343,9 @@
       <DependentUpon>book-list.component.ts</DependentUpon>
     </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\components\index.ts" />
+    <TypeScriptCompile Include="src\app\components\nav.component.spec.ts">
+      <DependentUpon>nav.component.ts</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\environment.ts" />
     <TypeScriptCompile Include="src\app\index.ts" />
     <TypeScriptCompile Include="src\app\models\author.model.ts" />
@@ -326,6 +353,9 @@
     <TypeScriptCompile Include="src\app\models\index.ts" />
     <TypeScriptCompile Include="src\app\models\part.model.ts" />
     <TypeScriptCompile Include="src\app\models\theme.model.ts" />
+    <TypeScriptCompile Include="src\app\pages\add-book-page.component.spec.ts">
+      <DependentUpon>add-book-page.component.ts</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\pages\book-detail-page.component.spec.ts">
       <DependentUpon>book-detail-page.component.ts</DependentUpon>
     </TypeScriptCompile>
@@ -367,6 +397,9 @@
     <TypeScriptCompile Include="src\app\routing\routing.module.ts" />
     <TypeScriptCompile Include="src\app\action-creators\action-creators.module.ts" />
     <TypeScriptCompile Include="src\app\services\services.module.ts" />
+    <TypeScriptCompile Include="src\app\components\nav.component.ts" />
+    <TypeScriptCompile Include="src\app\pages\add-book-page.component.ts" />
+    <TypeScriptCompile Include="src\app\components\add-book-form.component.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>

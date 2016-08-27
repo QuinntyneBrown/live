@@ -1,0 +1,7 @@
+<section class="add-book-form">
+    <h1>Add Book</h1>
+    <form novalidate [formGroup]="form">
+        <input placeholder="Name" formControlName="name" />        
+        <button (click)="onSubmit()">Submit</button>
+    </form>
+</section>

@@ -1,13 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from "@angular/common";
+import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
 
-import { BookListComponent } from './book-list.component';
-import { BookDetailComponent } from './book-detail.component';
+import {
+    AddBookFormComponent,
+    BookListComponent,
+    BookDetailComponent,
+    NavComponent
+} from './';
 
-const declarables = [BookDetailComponent, BookListComponent];
+const declarables = [
+    AddBookFormComponent,
+    BookDetailComponent,
+    BookListComponent,
+    NavComponent
+];
 
 @NgModule({
-    imports: [CommonModule],
+    imports: [CommonModule, RouterModule, ReactiveFormsModule],
     exports: [declarables],
     declarations: [declarables]
 })

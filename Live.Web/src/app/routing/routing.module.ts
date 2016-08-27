@@ -1,6 +1,7 @@
 import { Routes, RouterModule } from '@angular/router';
 
 import {
+    AddBookPageComponent,
     HomePageComponent,
     BookDetailPageComponent,
     NotFoundPageComponent
@@ -15,6 +16,14 @@ export const routes: Routes = [
     {
         path: 'home',
         component: HomePageComponent
+    },
+    {
+        path: 'book/add',
+        component: AddBookPageComponent
+    },
+    {
+        path: 'book/:id',
+        component: BookDetailPageComponent
     }
 ];
 

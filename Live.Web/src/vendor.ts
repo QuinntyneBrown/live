@@ -1,6 +1,5 @@
-require("../lib/jquery.min.js");
-require("../lib/slick.min.js");
-window["$"] = $;
+window["jQuery"] = require("../lib/jquery.min.js");
+require("../lib/slick.min.js")
 
 import '@angular/platform-browser';
 import '@angular/platform-browser-dynamic';
