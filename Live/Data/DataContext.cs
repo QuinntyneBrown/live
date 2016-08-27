@@ -1,3 +1,4 @@
+using Live.Models;
 using System.Data.Entity;
 
 namespace Live.Data
@@ -12,7 +13,7 @@ namespace Live.Data
             Configuration.AutoDetectChangesEnabled = true;
         }
 
-        public DbSet<Models.Book> Books { get; set; }
+        public DbSet<Book> Books { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
