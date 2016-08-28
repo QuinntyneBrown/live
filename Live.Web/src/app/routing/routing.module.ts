@@ -29,4 +29,5 @@ export const routes: Routes = [
 
 export const RoutingModule = RouterModule.forRoot([...routes]);
 
+export const routedComponents = routes.filter(r => r.component != undefined).map(r => r.component);
 

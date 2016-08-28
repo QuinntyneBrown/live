@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from "@angular/common";
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { PipesModule } from "../pipes";
 
 import {
     AddBookFormComponent,
@@ -18,7 +19,7 @@ const declarables = [
 ];
 
 @NgModule({
-    imports: [CommonModule, RouterModule, ReactiveFormsModule],
+    imports: [PipesModule, CommonModule, RouterModule, ReactiveFormsModule],
     exports: [declarables],
     declarations: [declarables]
 })

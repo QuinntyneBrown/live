@@ -21,6 +21,8 @@ namespace Live.Services
                 .FirstOrDefault(x => x.Id == request.Id && x.IsDeleted == false);
             if (entity == null) _repository.Add(entity = new Models.Book());
             entity.Name = request.Name;
+            entity.Purpose = request.Purpose;
+            entity.Index = request.Index.Value;
             _uow.SaveChanges();
             return new BookAddOrUpdateResponseDto(entity);
         }

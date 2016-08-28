@@ -370,6 +370,8 @@
     <TypeScriptCompile Include="src\app\pages\not-found-page.component.spec.ts">
       <DependentUpon>not-found-page.component.ts</DependentUpon>
     </TypeScriptCompile>
+    <TypeScriptCompile Include="src\app\pipes\index.ts" />
+    <TypeScriptCompile Include="src\app\pipes\sort-books.pipe.ts" />
     <TypeScriptCompile Include="src\app\routing\index.ts" />
     <TypeScriptCompile Include="src\app\rxjs-extensions.ts" />
     <TypeScriptCompile Include="src\app\services\book.service.ts" />
@@ -405,6 +407,7 @@
     <TypeScriptCompile Include="src\app\pages\add-book-page.component.ts" />
     <TypeScriptCompile Include="src\app\components\add-book-form.component.ts" />
     <TypeScriptCompile Include="src\app\store\store.module.ts" />
+    <TypeScriptCompile Include="src\app\pipes\pipes.module.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>

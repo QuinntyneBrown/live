@@ -1,6 +1,6 @@
 <div class="book-list">
     <h1>Book List</h1>
-    <div *ngFor="let book of entities">
+    <div *ngFor="let book of entities | sortBooks ">
         <a [routerLink]="['/book', book.id]" href="">{{ book.name}}</a><a (click)="onDelete(book)">DELETE</a>
     </div>
 </div>

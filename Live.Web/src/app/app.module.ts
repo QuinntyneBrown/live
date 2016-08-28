@@ -3,27 +3,30 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
 import { RouterModule  } from '@angular/router';
 import { HttpModule } from '@angular/http';
+import { EffectsModule } from '@ngrx/effects';
+
+import "./rxjs-extensions";
 
 import { AppComponent } from './app.component';
-import "./rxjs-extensions";
 
 import { ActionCreatorsModule } from "./action-creators";
 import { ComponentsModule } from "./components";
-import { RoutingModule } from "./routing";
+import { RoutingModule, routedComponents } from "./routing";
 import { ServicesModule } from "./services";
 import { StoreModule } from "./store";
+import { PipesModule } from "./pipes";
 
-import {
-    HomePageComponent,
-    AddBookPageComponent,
-    BookDetailPageComponent,
-    NotFoundPageComponent
-} from "./pages";
+import { AddBookPageComponent } from "./pages";
 
-const declarables = [AppComponent, HomePageComponent, AddBookPageComponent, BookDetailPageComponent, NotFoundPageComponent];
+const declarables = [
+    AppComponent,
+    ...routedComponents
+];
 
 @NgModule({
     imports: [
+        EffectsModule.run(AddBookPageComponent),
+
         BrowserModule,
         HttpModule,
         CommonModule,
@@ -31,6 +34,7 @@ const declarables = [AppComponent, HomePageComponent, AddBookPageComponent, Book
 
         ActionCreatorsModule,
         ComponentsModule,
+        PipesModule,
         RoutingModule,
         ServicesModule,
         StoreModule

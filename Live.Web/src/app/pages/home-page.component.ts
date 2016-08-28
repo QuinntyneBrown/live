@@ -4,6 +4,7 @@ import { BookActionCreator } from "../action-creators";
 import { Store } from "@ngrx/store";
 import { AppState } from "../store";
 import { Observable } from "rxjs";
+import { Router } from "@angular/router";
 
 @Component({
     template: require("./home-page.component.html"),
@@ -14,6 +15,7 @@ import { Observable } from "rxjs";
 export class HomePageComponent implements OnInit { 
     constructor(
         private _bookActionCreator: BookActionCreator,
+        private _router: Router,
         private _store: Store<AppState>) {}
 
     ngOnInit() {
@@ -22,6 +24,12 @@ export class HomePageComponent implements OnInit {
 
     public onDeleted($event: { value: Book }) {
         this._bookActionCreator.remove({ id: $event.value.id });
+    }
+
+    public onSelected($event: { value: Book }) {
+        this._bookActionCreator.remove({ id: $event.value.id });
+
+        this._router.navigate
     }
 
     public get entities$(): Observable<Array<Book>> {
