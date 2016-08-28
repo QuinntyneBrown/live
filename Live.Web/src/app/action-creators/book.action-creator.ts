@@ -2,7 +2,7 @@
 import { Store } from "@ngrx/store";
 import { BookService } from "../services";
 import { AppState } from "../store";
-import { ADD_BOOK_SUCCESS, GET_BOOK_SUCCESS } from "../actions";
+import { ADD_BOOK_SUCCESS, GET_BOOK_SUCCESS, REMOVE_BOOK_SUCCESS } from "../actions";
 import { Book } from "../models";
 import { Observable } from "rxjs";
 
@@ -27,6 +27,17 @@ export class BookActionCreator {
                 this._store.dispatch({
                     type: GET_BOOK_SUCCESS,
                     payload: books
+                });
+                return true;
+            });
+    }
+
+    public remove(options: {id: number}) {
+        return this._bookService.remove({ id: options.id })
+            .subscribe(book => {
+                this._store.dispatch({
+                    type: REMOVE_BOOK_SUCCESS,
+                    payload: book
                 });
                 return true;
             });

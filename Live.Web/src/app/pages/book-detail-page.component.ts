@@ -5,6 +5,7 @@ import { AppState } from "../store";
 import { ActivatedRoute } from "@angular/router";
 import { Observable } from "rxjs";
 import { BookActionCreator } from "../action-creators";
+import { pluck } from "../utilities";
 
 @Component({
     template: require("./book-detail-page.component.html"),
@@ -25,8 +26,8 @@ export class BookDetailPageComponent implements OnInit {
 
     public get entity$(): Observable<Book> {        
         return this._store.select("books")
-            .map((data: { books: Array<Book> }) => {                
-                return data.books.filter(b => b.id == this._activatedRoute.snapshot.params["id"])[0];
+            .map((data: { books: Array<Book> }) => {   
+                return pluck({ value: this._activatedRoute.snapshot.params["id"], items: data.books }) as Book;                             
             });
         
     };

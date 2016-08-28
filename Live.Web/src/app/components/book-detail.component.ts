@@ -1,6 +1,7 @@
 import { Component, ChangeDetectionStrategy, Input, OnInit } from "@angular/core";
 import { Book } from "../models";
 
+
 @Component({
     template: require("./book-detail.component.html"),
     styles: [require("./book-detail.component.scss")],

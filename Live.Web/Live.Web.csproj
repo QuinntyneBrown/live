@@ -381,6 +381,7 @@
     <TypeScriptCompile Include="src\app\store\reducers\index.ts" />
     <TypeScriptCompile Include="src\app\utilities\add-or-update.ts" />
     <TypeScriptCompile Include="src\app\utilities\index.ts" />
+    <TypeScriptCompile Include="src\app\utilities\pluck-out.ts" />
     <TypeScriptCompile Include="src\app\utilities\pluck.ts" />
     <TypeScriptCompile Include="src\main.ts" />
     <TypeScriptCompile Include="src\vendor.ts" />

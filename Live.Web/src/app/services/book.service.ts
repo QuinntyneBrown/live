@@ -25,5 +25,12 @@ export class BookService {
             }); 
     }
 
-
+    public remove(options: { id: number }) {
+        return this._http
+            .delete(`/api/book/remove?id=${options.id}`)
+            .map(data => data.json())
+            .catch(err => {
+                return Observable.of(false);
+            });
+    }
 }
