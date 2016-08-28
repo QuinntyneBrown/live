@@ -331,6 +331,7 @@
     <TypeScriptCompile Include="src\app\actions\add-book-success.action.ts" />
     <TypeScriptCompile Include="src\app\actions\get-book-success.action.ts" />
     <TypeScriptCompile Include="src\app\actions\index.ts" />
+    <TypeScriptCompile Include="src\app\actions\remove-book-success.action.ts" />
     <TypeScriptCompile Include="src\app\app.component.spec.ts">
       <DependentUpon>app.component.ts</DependentUpon>
     </TypeScriptCompile>

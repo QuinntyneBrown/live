@@ -21,7 +21,7 @@ export class BookActionCreator {
             });
     }
 
-    public get() {
+    public get() {                          
         return this._bookService.get()
             .subscribe(books => {
                 this._store.dispatch({

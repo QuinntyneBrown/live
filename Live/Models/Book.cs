@@ -7,6 +7,7 @@ namespace Live.Models
     public class Book
     {
         public int Id { get; set; }
+        public int Index { get; set; }
         [ForeignKey("Part")]
         public int? PartId { get; set; }
         public ICollection<BookAuthor> Authors { get; set; } = new HashSet<BookAuthor>();

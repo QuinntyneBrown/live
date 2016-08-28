@@ -1,9 +1,16 @@
 import { NgModule } from '@angular/core';
-import { provideStore } from "@ngrx/store";
+import { ActionReducer, Action, combineReducers, provideStore } from '@ngrx/store';
+import { compose } from "@ngrx/core/compose";
+import { localStorageSync } from "ngrx-store-localstorage";
 import { booksReducer } from "./reducers";
 
 const providers = [
-    provideStore({ books: booksReducer })
+    provideStore(
+        compose(
+            localStorageSync(['books'],true),
+            combineReducers
+        )({ books: booksReducer })
+    )
 ];
 
 @NgModule({

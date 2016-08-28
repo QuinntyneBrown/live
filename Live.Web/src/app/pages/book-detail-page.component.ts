@@ -15,11 +15,9 @@ import { BookActionCreator } from "../action-creators";
 export class BookDetailPageComponent implements OnInit { 
     constructor(
         private _store: Store<AppState>,
-        private _route: ActivatedRoute,
+        private _activatedRoute: ActivatedRoute,
         private _bookActionCreator: BookActionCreator
-    ) {
-        
-    }
+    ) { }
 
     ngOnInit() {
         this._bookActionCreator.get();
@@ -28,7 +26,7 @@ export class BookDetailPageComponent implements OnInit {
     public get entity$(): Observable<Book> {        
         return this._store.select("books")
             .map((data: { books: Array<Book> }) => {                
-                return data.books.filter(b => b.id == this._route.snapshot.params["id"])[0];
+                return data.books.filter(b => b.id == this._activatedRoute.snapshot.params["id"])[0];
             });
         
     };
