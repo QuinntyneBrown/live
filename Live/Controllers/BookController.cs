@@ -19,8 +19,7 @@ namespace Live.Controllers
         [HttpPost]
         [AllowAnonymous]
         [ResponseType(typeof(BookAddOrUpdateResponseDto))]
-        public IHttpActionResult Add() {
-            BookAddOrUpdateRequestDto dto = new BookAddOrUpdateRequestDto();
+        public IHttpActionResult Add(BookAddOrUpdateRequestDto dto) {
             return Ok(_bookService.AddOrUpdate(dto));
         }
 

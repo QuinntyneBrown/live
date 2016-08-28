@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
+import { RouterModule  } from '@angular/router';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
@@ -26,6 +27,7 @@ const declarables = [AppComponent, HomePageComponent, AddBookPageComponent, Book
         BrowserModule,
         HttpModule,
         CommonModule,
+        RouterModule,
 
         ActionCreatorsModule,
         ComponentsModule,

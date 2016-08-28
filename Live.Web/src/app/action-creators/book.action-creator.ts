@@ -2,7 +2,7 @@
 import { Store } from "@ngrx/store";
 import { BookService } from "../services";
 import { AppState } from "../store";
-import { ADD_BOOK_SUCCESS } from "../actions";
+import { ADD_BOOK_SUCCESS, GET_BOOK_SUCCESS } from "../actions";
 import { Book } from "../models";
 import { Observable } from "rxjs";
 
@@ -10,12 +10,23 @@ import { Observable } from "rxjs";
 export class BookActionCreator {
     constructor(private _bookService: BookService, private _store: Store<AppState>) { }
 
-    public add(book: Book): Observable<boolean> {
+    public add(book: Book) {
         return this._bookService.add(book)
-            .map(book => {
+            .subscribe(book => {
                 this._store.dispatch({
                     type: ADD_BOOK_SUCCESS,
                     payload: book
+                });
+                return true;
+            });
+    }
+
+    public get() {
+        return this._bookService.get()
+            .subscribe(books => {
+                this._store.dispatch({
+                    type: GET_BOOK_SUCCESS,
+                    payload: books
                 });
                 return true;
             });

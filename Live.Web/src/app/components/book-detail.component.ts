@@ -5,8 +5,8 @@ import { Book } from "../models";
     template: require("./book-detail.component.html"),
     styles: [require("./book-detail.component.scss")],
     selector: "book-detail",
-    changeDetection: ChangeDetectionStrategy.OnPush
+    changeDetection: ChangeDetectionStrategy.Default
 })
 export class BookDetailComponent { 
-    @Input() public entity: Book = null;
+    @Input() public entity: any;
 }
