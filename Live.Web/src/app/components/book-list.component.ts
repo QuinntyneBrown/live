@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, Input, OnInit } from "@angular/core";
+import { Component, ChangeDetectionStrategy, Input, OnInit, Output, EventEmitter } from "@angular/core";
 import { Book } from "../models";
 
 @Component({
@@ -8,4 +8,12 @@ import { Book } from "../models";
 })
 export class BookListComponent { 
     @Input() entities: Array<Book>;
+
+    @Output() onDeleted: EventEmitter<any> = new EventEmitter();
+
+    public onDelete(book: Book) {
+        this.onDeleted.emit({
+            value: book
+        });
+    }
 }

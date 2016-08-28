@@ -37,7 +37,7 @@ export class BookActionCreator {
             .subscribe(book => {
                 this._store.dispatch({
                     type: REMOVE_BOOK_SUCCESS,
-                    payload: book
+                    payload: options.id
                 });
                 return true;
             });

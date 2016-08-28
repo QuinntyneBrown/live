@@ -14,12 +14,14 @@ import { Observable } from "rxjs";
 export class HomePageComponent implements OnInit { 
     constructor(
         private _bookActionCreator: BookActionCreator,
-        private _store: Store<AppState>) {
-        
-    }
+        private _store: Store<AppState>) {}
 
     ngOnInit() {
         this._bookActionCreator.get();
+    }
+
+    public onDeleted($event: { value: Book }) {
+        this._bookActionCreator.remove({ id: $event.value.id });
     }
 
     public get entities$(): Observable<Array<Book>> {

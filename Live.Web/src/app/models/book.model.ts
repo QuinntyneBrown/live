@@ -4,6 +4,7 @@ import { Theme } from "./theme.model";
 
 export class Book {
     public id: number = 0;
+    public index: number = 0;
     public name: string;
     public writtenFromDate: string;
     public writtenEndDate: string;
