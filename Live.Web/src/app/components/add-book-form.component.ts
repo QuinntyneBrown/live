@@ -1,4 +1,11 @@
-import { Component, ChangeDetectionStrategy, Input, Output, EventEmitter } from "@angular/core";
+import {
+    Component,
+    ChangeDetectionStrategy,
+    Input,
+    Output,
+    EventEmitter
+} from "@angular/core";
+
 import {
     FormGroup,
     FormControl
@@ -7,18 +14,18 @@ import {
 @Component({
     template: require("./add-book-form.component.html"),
     styles: [require("./add-book-form.component.scss")],
-    selector: "add-book-form",
+    selector: "add-book-form",    
     changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AddBookFormComponent { 
-    @Output() contactFormSubmitted = new EventEmitter();
+    @Output() onSubmitted = new EventEmitter();
 
     public form = new FormGroup({
         name: new FormControl()
     });
 
     public onSubmit = () => {
-        this.contactFormSubmitted.emit({
+        this.onSubmitted.emit({
             value: this.form.value
         });
     }

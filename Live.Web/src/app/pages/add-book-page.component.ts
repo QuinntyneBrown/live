@@ -1,4 +1,6 @@
-import { Component, ChangeDetectionStrategy, Input, OnInit } from "@angular/core";
+import { Component, ChangeDetectionStrategy } from "@angular/core";
+import { BookActionCreator } from "../action-creators"
+import { Book } from "../models";
 
 @Component({
     template: require("./add-book-page.component.html"),
@@ -6,8 +8,10 @@ import { Component, ChangeDetectionStrategy, Input, OnInit } from "@angular/core
     selector: "add-book-page",
     changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AddBookPageComponent implements OnInit { 
-    ngOnInit() {
+export class AddBookPageComponent { 
+    constructor(private _bookActionCreator: BookActionCreator) { }
 
+    public onSubmitted(form: { value: Book }) {        
+        this._bookActionCreator.add(form.value);
     }
 }

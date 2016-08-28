@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 
@@ -11,12 +12,20 @@ import { RoutingModule } from "./routing";
 import { ServicesModule } from "./services";
 import { StoreModule } from "./store";
 
-const declarables = [AppComponent]
+import {
+    HomePageComponent,
+    AddBookPageComponent,
+    BookDetailPageComponent,
+    NotFoundPageComponent
+} from "./pages";
+
+const declarables = [AppComponent, HomePageComponent, AddBookPageComponent, BookDetailPageComponent, NotFoundPageComponent];
 
 @NgModule({
     imports: [
         BrowserModule,
         HttpModule,
+        CommonModule,
 
         ActionCreatorsModule,
         ComponentsModule,

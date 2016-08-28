@@ -6,7 +6,7 @@ using System.Web.Http.Description;
 
 namespace Live.Controllers
 {
-    [Authorize]
+    [AllowAnonymous]
     [RoutePrefix("api/book")]
     public class BookController : ApiController
     {
@@ -17,8 +17,12 @@ namespace Live.Controllers
 
         [Route("add")]
         [HttpPost]
+        [AllowAnonymous]
         [ResponseType(typeof(BookAddOrUpdateResponseDto))]
-        public IHttpActionResult Add(BookAddOrUpdateRequestDto dto) { return Ok(_bookService.AddOrUpdate(dto)); }
+        public IHttpActionResult Add() {
+            BookAddOrUpdateRequestDto dto = new BookAddOrUpdateRequestDto();
+            return Ok(_bookService.AddOrUpdate(dto));
+        }
 
         [Route("update")]
         [HttpPut]

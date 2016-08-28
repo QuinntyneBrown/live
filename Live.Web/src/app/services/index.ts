@@ -1,1 +1,3 @@
-﻿export * from "./services.module";
+﻿export * from "./book.service";
+
+export * from "./services.module";
