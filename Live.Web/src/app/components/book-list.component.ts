@@ -19,7 +19,7 @@ export class BookListComponent {
         });
     }
 
-    public onDelete(book: Book) {
+    public onDelete(book: Book) {        
         this.onDeleted.emit({
             value: book
         });

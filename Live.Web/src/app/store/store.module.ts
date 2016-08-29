@@ -11,9 +11,11 @@ const providers = [
 ];
 
 @NgModule({
-    imports: [ngrxStore.StoreModule.provideStore({
-        books: booksReducer
-    }, [initialState])],
-	providers: providers
+    imports: [
+        ngrxStore.StoreModule.provideStore(
+            { books: booksReducer },
+            [initialState]
+        )],
+    providers: providers
 })
 export class StoreModule { }

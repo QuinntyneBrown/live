@@ -1,3 +1,5 @@
 <div class="home-page">
-    <book-list [entities]="entities$ | async" (onDeleted)="onDeleted($event)"></book-list>
+    <book-list [entities]="entities$ | async" 
+               (onDeleted)="onDeleted($event)"
+               (onSelected)="onSelected($event)"></book-list>
 </div>

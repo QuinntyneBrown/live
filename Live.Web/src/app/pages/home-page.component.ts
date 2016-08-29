@@ -16,7 +16,7 @@ export class HomePageComponent implements OnInit {
     constructor(
         private _bookActionCreator: BookActionCreator,
         private _router: Router,
-        private _store: AppStore) {}
+        private _store: AppStore) { }
 
     ngOnInit() {
         this._bookActionCreator.get();
@@ -26,13 +26,11 @@ export class HomePageComponent implements OnInit {
         this._bookActionCreator.remove({ id: $event.value.id });
     }
 
-    public onSelected($event: { value: Book }) {        
+    public onSelected($event: { value: Book }) {
         this._router.navigate(['/book', $event.value.id]);
     }
 
     public get entities$(): Observable<Array<Book>> {
         return this._store.books$();
-    };
-
-
+    };    
 }
