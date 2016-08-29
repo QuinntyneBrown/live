@@ -30,6 +30,12 @@ export class AppStore {
 
     public lastTriggeredActionId: string = null;    
 
+    public getState(): AppState {
+        let state: AppState;
+        this._store.take(1).subscribe(s => state = s);
+        return state;
+    }
+
     public bookById$(id: string): Observable<Book> {
         return this._store.select("books")
             .map((data: { books: Array<Book> }) => {
