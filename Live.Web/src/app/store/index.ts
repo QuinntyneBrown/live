@@ -2,3 +2,4 @@
 export * from "./initial-state";
 export * from "./reducers";
 export * from "./store.module";
+export * from "./services";

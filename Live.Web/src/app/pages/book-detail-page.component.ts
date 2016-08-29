@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, Input, OnInit, Inject } from "@angular/core";
 import { Book } from "../models";
 import { Store } from "@ngrx/store";
-import { AppState } from "../store";
+import { AppState, AppStore } from "../store";
 import { ActivatedRoute } from "@angular/router";
 import { Observable } from "rxjs";
 import { BookActionCreator } from "../action-creators";
@@ -15,7 +15,7 @@ import { pluck } from "../utilities";
 })
 export class BookDetailPageComponent implements OnInit { 
     constructor(
-        private _store: Store<AppState>,
+        private _store: AppStore,
         private _activatedRoute: ActivatedRoute,
         private _bookActionCreator: BookActionCreator
     ) { }

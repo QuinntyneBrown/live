@@ -4,7 +4,7 @@ import { Book } from "../models";
 import { ADD_BOOK_SUCCESS } from "../actions";
 import { Router } from "@angular/router";
 import { Store } from "@ngrx/store";
-import { AppState } from "../store";
+import { AppState, AppStore } from "../store";
 import { pluck } from "../utilities";
 
 @Component({
@@ -17,12 +17,12 @@ import { pluck } from "../utilities";
 export class AddBookPageComponent { 
     constructor(
         private _bookActionCreator: BookActionCreator,
-        private _store: Store<AppState>,
+        private _store: AppStore,
         private _router: Router
     ) {
         _store.select("books")
             .subscribe((data: { books: Array<Book> }) => {   
-                if (this.addBookActionId && this.currentState.triggeredByAction.triggeredByActionId == this.addBookActionId) {
+                if (this.addBookActionId && this._store.lastTriggeredActionId == this.addBookActionId) {
                     this._router.navigate(["/home"]);
                 }
             });
@@ -31,11 +31,6 @@ export class AddBookPageComponent {
         this.addBookActionId = this._bookActionCreator.add(form.value);
     }
 
-    public get currentState(): AppState {
-        let state: AppState;
-        this._store.take(1).subscribe(s => state = s);
-        return state;
-    };
 
     public addBookActionId: string = null;
 }

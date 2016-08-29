@@ -2,8 +2,6 @@
 
 export interface AppState {
     books: Array<Book>;
-    triggeredByAction?: {
-        triggeredByActionId?: string;
-        triggeredByAction?: string;
-    };
+    triggeredByActionId?: string;
+    triggeredByAction?: string;
 }

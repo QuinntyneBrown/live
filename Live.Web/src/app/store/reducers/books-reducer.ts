@@ -11,7 +11,13 @@ export const booksReducer = (state: AppState = initialState, action: Action) => 
             var entities: Array<Book> = state.books;
             var entity: Book = action.payload;
             addOrUpdate({ items: entities, item: entity});            
-            return Object.assign({}, state, { books: entities});
+            return Object.assign({}, state,
+                {
+                    books: entities,
+                    //triggeredByActionId: (action as any).id,
+                    //triggeredByAction: action.type
+                }
+            );
 
         case GET_BOOK_SUCCESS:
             var entities: Array<Book> = state.books;
@@ -19,13 +25,25 @@ export const booksReducer = (state: AppState = initialState, action: Action) => 
             for (let i = 0; i < newOrExistingBooks.length; i++) {
                 addOrUpdate({ items: entities, item: newOrExistingBooks[i] });
             }                                    
-            return Object.assign({}, state, { books: entities });
+            return Object.assign({}, state,
+                {
+                    books: entities,
+                    triggeredByActionId: (action as any).id,
+                    triggeredByAction: action.type
+                }
+            );
 
         case REMOVE_BOOK_SUCCESS:
             var entities: Array<Book> = state.books;
             var id = action.payload;
             pluckOut({ value: id, items: entities });
-            return Object.assign({}, state, { books: entities });
+            return Object.assign({}, state,
+                {
+                    books: entities,
+                    triggeredByActionId: (action as any).id,
+                    triggeredByAction: action.type
+                }
+            );
 
         default:
             return state;

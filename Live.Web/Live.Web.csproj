@@ -381,7 +381,10 @@
     <TypeScriptCompile Include="src\app\store\initial-state.ts" />
     <TypeScriptCompile Include="src\app\store\reducers\books-reducer.ts" />
     <TypeScriptCompile Include="src\app\store\reducers\index.ts" />
+    <TypeScriptCompile Include="src\app\store\reducers\triggered-by-action-id-reducer.ts" />
     <TypeScriptCompile Include="src\app\store\reducers\triggered-by-action-reducer.ts" />
+    <TypeScriptCompile Include="src\app\store\services\index.ts" />
+    <TypeScriptCompile Include="src\app\store\services\app-store.ts" />
     <TypeScriptCompile Include="src\app\utilities\add-or-update.ts" />
     <TypeScriptCompile Include="src\app\utilities\guid.ts" />
     <TypeScriptCompile Include="src\app\utilities\index.ts" />
