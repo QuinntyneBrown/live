@@ -2,7 +2,7 @@ import { Component, ChangeDetectionStrategy, Input, OnInit } from "@angular/core
 import { Book } from "../models";
 import { BookActionCreator } from "../action-creators";
 import { Store } from "@ngrx/store";
-import { AppState } from "../store";
+import { AppState, AppStore } from "../store";
 import { Observable } from "rxjs";
 import { Router } from "@angular/router";
 
@@ -16,7 +16,7 @@ export class HomePageComponent implements OnInit {
     constructor(
         private _bookActionCreator: BookActionCreator,
         private _router: Router,
-        private _store: Store<AppState>) {}
+        private _store: AppStore) {}
 
     ngOnInit() {
         this._bookActionCreator.get();
@@ -26,17 +26,12 @@ export class HomePageComponent implements OnInit {
         this._bookActionCreator.remove({ id: $event.value.id });
     }
 
-    public onSelected($event: { value: Book }) {
-        this._bookActionCreator.remove({ id: $event.value.id });
-
-        this._router.navigate
+    public onSelected($event: { value: Book }) {        
+        this._router.navigate(['/book', $event.value.id]);
     }
 
     public get entities$(): Observable<Array<Book>> {
-        return this._store.select("books")
-            .map((data: { books: Array<Book> }) => {
-                return data.books;
-            });
+        return this._store.books$();
     };
 
 

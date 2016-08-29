@@ -24,11 +24,7 @@ export class BookDetailPageComponent implements OnInit {
         this._bookActionCreator.get();
     }
 
-    public get entity$(): Observable<Book> {        
-        return this._store.select("books")
-            .map((data: { books: Array<Book> }) => {   
-                return pluck({ value: this._activatedRoute.snapshot.params["id"], items: data.books }) as Book;                             
-            });
-        
+    public get entity$(): Observable<Book> { 
+        return this._store.bookById$(this._activatedRoute.snapshot.params["id"]);        
     };
 }

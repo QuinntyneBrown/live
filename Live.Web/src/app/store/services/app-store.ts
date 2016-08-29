@@ -1,8 +1,10 @@
 ﻿import { Injectable } from "@angular/core";
 import { Store, Action } from "@ngrx/store";
 import { AppState } from "../app-state";
-import { guid } from "../../utilities";
+import { guid, pluck } from "../../utilities";
 import { select, SelectSignature } from '@ngrx/core/operator/select';
+import { Observable } from "rxjs";
+import { Book } from "../../models";
 
 
 @Injectable()
@@ -27,5 +29,19 @@ export class AppStore {
     public lastTriggeredAction: string = null;
 
     public lastTriggeredActionId: string = null;    
+
+    public bookById$(id: string): Observable<Book> {
+        return this._store.select("books")
+            .map((data: { books: Array<Book> }) => {
+                return pluck({ value: id, items: data.books }) as Book;
+            })
+    }
+
+    public books$(): Observable<Array<Book>> {
+        return this._store.select("books")
+            .map((data: { books: Array<Book> }) => {
+                return data.books;
+            });
+    }
 }
 
