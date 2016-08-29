@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { BrowserModule  } from '@angular/platform-browser';
 import { RouterModule  } from '@angular/router';
 import { HttpModule } from '@angular/http';
-import { EffectsModule } from '@ngrx/effects';
 
 import "./rxjs-extensions";
 
@@ -24,9 +23,7 @@ const declarables = [
 ];
 
 @NgModule({
-    imports: [
-        EffectsModule.run(AddBookPageComponent),
-
+    imports: [        
         BrowserModule,
         HttpModule,
         CommonModule,
@@ -37,7 +34,7 @@ const declarables = [
         PipesModule,
         RoutingModule,
         ServicesModule,
-        StoreModule
+        StoreModule        
     ],
     declarations: [declarables],
     exports: [declarables],

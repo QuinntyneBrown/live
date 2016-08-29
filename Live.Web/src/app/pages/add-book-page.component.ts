@@ -2,8 +2,10 @@ import { Component, ChangeDetectionStrategy } from "@angular/core";
 import { BookActionCreator } from "../action-creators"
 import { Book } from "../models";
 import { ADD_BOOK_SUCCESS } from "../actions";
-import { Actions, Effect } from '@ngrx/effects';
-//import { Router } from "@angular/router";
+import { Router } from "@angular/router";
+import { Store } from "@ngrx/store";
+import { AppState } from "../store";
+import { pluck } from "../utilities";
 
 @Component({
     template: require("./add-book-page.component.html"),
@@ -15,18 +17,25 @@ import { Actions, Effect } from '@ngrx/effects';
 export class AddBookPageComponent { 
     constructor(
         private _bookActionCreator: BookActionCreator,
-        private _actions$: Actions
-    ) { }
-
-    @Effect() bookAddSuccess$ = this._actions$
-        .ofType(ADD_BOOK_SUCCESS)
-        .map(() => {
-            //Bug: Bootstrap at least one component before injecting Router
-            //this._router.navigate(['/home']
-            window.location.href = "/";
-        });
-
-    public onSubmitted(form: { value: Book }) {        
-        this._bookActionCreator.add(form.value);
+        private _store: Store<AppState>,
+        private _router: Router
+    ) {
+        _store.select("books")
+            .subscribe((data: { books: Array<Book> }) => {   
+                if (this.addBookActionId && this.currentState.triggeredByAction.triggeredByActionId == this.addBookActionId) {
+                    this._router.navigate(["/home"]);
+                }
+            });
     }
+    public onSubmitted(form: { value: Book }) {        
+        this.addBookActionId = this._bookActionCreator.add(form.value);
+    }
+
+    public get currentState(): AppState {
+        let state: AppState;
+        this._store.take(1).subscribe(s => state = s);
+        return state;
+    };
+
+    public addBookActionId: string = null;
 }
