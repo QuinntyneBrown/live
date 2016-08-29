@@ -1,5 +1,5 @@
 <div class="home-page">
-    <book-list [entities]="entities$ | async" 
-               (onDeleted)="onDeleted($event)"
-               (onSelected)="onSelected($event)"></book-list>
+    <book-list [entities]="_store.books$() | async" 
+               (onDelete)="_bookActionCreator.remove({ id: $event.value.id })"
+               (onSelect)="_router.navigate(['/book', $event.value.id])"></book-list>
 </div>

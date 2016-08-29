@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy } from "@angular/core";
+import { Component, ChangeDetectionStrategy, OnInit } from "@angular/core";
 import { BookActionCreator } from "../action-creators"
 import { Book } from "../models";
 import { ADD_BOOK_SUCCESS } from "../actions";
@@ -14,23 +14,25 @@ import { pluck } from "../utilities";
     changeDetection: ChangeDetectionStrategy.OnPush,
     
 })
-export class AddBookPageComponent { 
+export class AddBookPageComponent implements OnInit { 
     constructor(
         private _bookActionCreator: BookActionCreator,
         private _store: AppStore,
         private _router: Router
-    ) {
-        _store.select("books")
-            .subscribe((data: { books: Array<Book> }) => {   
+    ) { }
+
+    ngOnInit() {
+        this._store.select("books")
+            .subscribe((data: { books: Array<Book> }) => {
                 if (this.addBookActionId && this._store.lastTriggeredActionId == this.addBookActionId) {
                     this._router.navigate(["/home"]);
                 }
             });
     }
-    public onSubmitted(form: { value: Book }) {        
+
+    public onSubmit(form: { value: Book }) {        
         this.addBookActionId = this._bookActionCreator.add(form.value);
     }
-
-
+    
     public addBookActionId: string = null;
 }

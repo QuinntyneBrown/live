@@ -8,20 +8,6 @@ import { Book } from "../models";
 })
 export class BookListComponent { 
     @Input() entities: Array<Book>;
-
-    @Output() onDeleted: EventEmitter<{ value: Book }> = new EventEmitter <{ value: Book }>();
-
-    @Output() onSelected: EventEmitter<{ value: Book }> = new EventEmitter<{ value: Book }>();
-
-    public onSelect(book: Book) {
-        this.onSelected.emit({
-            value: book
-        });
-    }
-
-    public onDelete(book: Book) {        
-        this.onDeleted.emit({
-            value: book
-        });
-    }
+    @Output() onDelete: EventEmitter<{ value: Book }> = new EventEmitter <{ value: Book }>();
+    @Output() onSelect: EventEmitter<{ value: Book }> = new EventEmitter<{ value: Book }>();    
 }

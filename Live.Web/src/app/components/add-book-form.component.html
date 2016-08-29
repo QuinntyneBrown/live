@@ -4,6 +4,6 @@
         <input placeholder="Index" formControlName="index" />
         <input placeholder="Name" formControlName="name" />
         <textarea placeholder="Purpose" formControlName="purpose"></textarea>                
-        <button (click)="onSubmit()">Submit</button>
+        <button (click)="onSubmit.emit({ value: this.form.value })">Submit</button>
     </form>
 </section>

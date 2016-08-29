@@ -17,20 +17,5 @@ export class HomePageComponent implements OnInit {
         private _bookActionCreator: BookActionCreator,
         private _router: Router,
         private _store: AppStore) { }
-
-    ngOnInit() {
-        this._bookActionCreator.get();
-    }
-
-    public onDeleted($event: { value: Book }) {
-        this._bookActionCreator.remove({ id: $event.value.id });
-    }
-
-    public onSelected($event: { value: Book }) {
-        this._router.navigate(['/book', $event.value.id]);
-    }
-
-    public get entities$(): Observable<Array<Book>> {
-        return this._store.books$();
-    };    
+    ngOnInit() { this._bookActionCreator.get(); }      
 }
