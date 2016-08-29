@@ -1,7 +1,7 @@
 import { Component, ChangeDetectionStrategy, OnInit } from "@angular/core";
-import { BookActionCreator } from "../action-creators"
+import { BookActions } from "../actions"
 import { Book } from "../models";
-import { ADD_BOOK_SUCCESS } from "../actions";
+import { ADD_BOOK_SUCCESS } from "../constants";
 import { Router } from "@angular/router";
 import { Store } from "@ngrx/store";
 import { AppState, AppStore } from "../store";
@@ -16,7 +16,7 @@ import { pluck } from "../utilities";
 })
 export class AddBookPageComponent implements OnInit { 
     constructor(
-        private _bookActionCreator: BookActionCreator,
+        private _bookActions: BookActions,
         private _store: AppStore,
         private _router: Router
     ) { }
@@ -24,15 +24,15 @@ export class AddBookPageComponent implements OnInit {
     ngOnInit() {
         this._store.select("books")
             .subscribe((data: { books: Array<Book> }) => {
-                if (this.addBookActionId && this._store.lastTriggeredActionId == this.addBookActionId) {
+                if (this.addId && this._store.lastTriggeredActionId == this.addId) {
                     this._router.navigate(["/home"]);
                 }
             });
     }
 
     public onSubmit(form: { value: Book }) {        
-        this.addBookActionId = this._bookActionCreator.add(form.value);
+        this.addId = this._bookActions.add(form.value);
     }
     
-    public addBookActionId: string = null;
+    public addId: string = null;
 }

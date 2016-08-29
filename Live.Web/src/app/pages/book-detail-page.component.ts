@@ -4,7 +4,7 @@ import { Store } from "@ngrx/store";
 import { AppState, AppStore } from "../store";
 import { ActivatedRoute } from "@angular/router";
 import { Observable } from "rxjs";
-import { BookActionCreator } from "../action-creators";
+import { BookActions } from "../actions";
 import { pluck } from "../utilities";
 
 @Component({
@@ -17,7 +17,7 @@ export class BookDetailPageComponent implements OnInit {
     constructor(
         private _store: AppStore,
         private _activatedRoute: ActivatedRoute,
-        private _bookActionCreator: BookActionCreator
+        private _bookActionCreator: BookActions
     ) { }
 
     ngOnInit() {

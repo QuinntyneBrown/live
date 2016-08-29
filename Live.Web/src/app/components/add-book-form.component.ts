@@ -8,7 +8,8 @@ import {
 
 import {
     FormGroup,
-    FormControl
+    FormControl,
+    Validators
 } from "@angular/forms";
 
 @Component({
@@ -19,8 +20,12 @@ import {
 export class AddBookFormComponent { 
     @Output() onSubmit = new EventEmitter();
     public form = new FormGroup({
-        index: new FormControl(),
-        name: new FormControl(),
+        index: new FormControl(0, Validators.required),
+        name: new FormControl("", [
+            Validators.required,
+            Validators.minLength(2),
+            Validators.maxLength(100)
+        ]),
         purpose: new FormControl()
     });
 }

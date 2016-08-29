@@ -326,12 +326,12 @@
   </Target>
   -->
   <ItemGroup>
-    <TypeScriptCompile Include="src\app\action-creators\book.action-creator.ts" />
-    <TypeScriptCompile Include="src\app\action-creators\index.ts" />
-    <TypeScriptCompile Include="src\app\actions\add-book-success.action.ts" />
-    <TypeScriptCompile Include="src\app\actions\get-book-success.action.ts" />
+    <TypeScriptCompile Include="src\app\actions\book.actions.ts" />
     <TypeScriptCompile Include="src\app\actions\index.ts" />
-    <TypeScriptCompile Include="src\app\actions\remove-book-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\add-book-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\get-book-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\index.ts" />
+    <TypeScriptCompile Include="src\app\constants\remove-book-success.action.ts" />
     <TypeScriptCompile Include="src\app\app.component.spec.ts">
       <DependentUpon>app.component.ts</DependentUpon>
     </TypeScriptCompile>
@@ -381,8 +381,6 @@
     <TypeScriptCompile Include="src\app\store\initial-state.ts" />
     <TypeScriptCompile Include="src\app\store\reducers\books-reducer.ts" />
     <TypeScriptCompile Include="src\app\store\reducers\index.ts" />
-    <TypeScriptCompile Include="src\app\store\reducers\triggered-by-action-id-reducer.ts" />
-    <TypeScriptCompile Include="src\app\store\reducers\triggered-by-action-reducer.ts" />
     <TypeScriptCompile Include="src\app\store\services\index.ts" />
     <TypeScriptCompile Include="src\app\store\services\app-store.ts" />
     <TypeScriptCompile Include="src\app\utilities\add-or-update.ts" />
@@ -406,7 +404,7 @@
     <TypeScriptCompile Include="src\app\pages\book-detail-page.component.ts" />
     <TypeScriptCompile Include="src\app\components\components.module.ts" />
     <TypeScriptCompile Include="src\app\routing\routing.module.ts" />
-    <TypeScriptCompile Include="src\app\action-creators\action-creators.module.ts" />
+    <TypeScriptCompile Include="src\app\actions\actions.module.ts" />
     <TypeScriptCompile Include="src\app\services\services.module.ts" />
     <TypeScriptCompile Include="src\app\components\nav.component.ts" />
     <TypeScriptCompile Include="src\app\pages\add-book-page.component.ts" />

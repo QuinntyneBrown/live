@@ -22,6 +22,10 @@ export const routes: Routes = [
         component: AddBookPageComponent
     },
     {
+        path: 'book/edit/:id',
+        component: AddBookPageComponent
+    },
+    {
         path: 'book/:id',
         component: BookDetailPageComponent
     }

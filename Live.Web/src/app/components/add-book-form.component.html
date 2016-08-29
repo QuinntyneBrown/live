@@ -2,8 +2,22 @@
     <h1>Add Book</h1>
     <form novalidate [formGroup]="form">
         <input placeholder="Index" formControlName="index" />
+        <span *ngIf="form.get('index').touched && form.hasError('required', 'index')">
+            required
+        </span>
         <input placeholder="Name" formControlName="name" />
+        <span *ngIf="form.get('name').touched && form.hasError('required', 'name')">
+            required
+        </span>
+        <span *ngIf="form.get('name').touched && form.hasError('maxLength', 'name')">
+            exceeds Max Length
+        </span>
+        <span *ngIf="form.get('name').touched && form.hasError('minLength', 'name')">
+            Doesn't meet minimum Length
+        </span>
         <textarea placeholder="Purpose" formControlName="purpose"></textarea>                
-        <button (click)="onSubmit.emit({ value: this.form.value })">Submit</button>
+        <button type="submit" 
+                (click)="onSubmit.emit({ value: this.form.value })"
+                [disabled]="form.invalid">Submit</button>
     </form>
 </section>

@@ -8,7 +8,7 @@ import "./rxjs-extensions";
 
 import { AppComponent } from './app.component';
 
-import { ActionCreatorsModule } from "./action-creators";
+import { ActionsModule } from "./actions";
 import { ComponentsModule } from "./components";
 import { RoutingModule, routedComponents } from "./routing";
 import { ServicesModule } from "./services";
@@ -29,7 +29,7 @@ const declarables = [
         CommonModule,
         RouterModule,
 
-        ActionCreatorsModule,
+        ActionsModule,
         ComponentsModule,
         PipesModule,
         RoutingModule,

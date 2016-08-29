@@ -1,6 +1,6 @@
 import { Component, ChangeDetectionStrategy, Input, OnInit } from "@angular/core";
 import { Book } from "../models";
-import { BookActionCreator } from "../action-creators";
+import { BookActions } from "../actions";
 import { Store } from "@ngrx/store";
 import { AppState, AppStore } from "../store";
 import { Observable } from "rxjs";
@@ -14,8 +14,8 @@ import { Router } from "@angular/router";
 })
 export class HomePageComponent implements OnInit { 
     constructor(
-        private _bookActionCreator: BookActionCreator,
+        private _bookActions: BookActions,
         private _router: Router,
         private _store: AppStore) { }
-    ngOnInit() { this._bookActionCreator.get(); }      
+    ngOnInit() { this._bookActions.get(); }      
 }

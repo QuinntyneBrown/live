@@ -1,13 +1,8 @@
-import { Component, ChangeDetectionStrategy, Input, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 
 @Component({
     template: require("./nav.component.html"),
     styles: [require("./nav.component.scss")],
-    selector: "nav",
-    changeDetection: ChangeDetectionStrategy.OnPush
+    selector: "nav"
 })
-export class NavComponent implements OnInit { 
-    ngOnInit() {
-
-    }
-}
+export class NavComponent { }
