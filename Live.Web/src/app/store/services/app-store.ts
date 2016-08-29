@@ -10,10 +10,15 @@ export class AppStore {
     constructor(private _store: Store<AppState>) { }
 
     public dispatch(action: Action, newGuid?: string): string {
+        newGuid = this._registerLastAction(action.type, newGuid);
+        this._store.dispatch(action);          
+        return newGuid;
+    }
+
+    private _registerLastAction(actionType:string,newGuid?: string):string {
         newGuid = newGuid || guid();
-        this.lastTriggeredAction = action.type;
-        this.lastTriggeredActionId = newGuid;
-        this._store.dispatch(action);        
+        this.lastTriggeredAction = actionType;
+        this.lastTriggeredActionId = newGuid;        
         return newGuid;
     }
 
