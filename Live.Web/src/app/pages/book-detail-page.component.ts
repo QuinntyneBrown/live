@@ -17,11 +17,11 @@ export class BookDetailPageComponent implements OnInit {
     constructor(
         private _store: AppStore,
         private _activatedRoute: ActivatedRoute,
-        private _bookActionCreator: BookActions
+        private _bookActions: BookActions
     ) { }
 
     ngOnInit() {
-        this._bookActionCreator.get();
+        this._bookActions.get();
     }
 
     public get entity$(): Observable<Book> { 
