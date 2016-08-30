@@ -45,6 +45,17 @@ export class BookActions {
             });
     }
 
+    public getById(options: { id: number }) {
+        return this._bookService.getById({ id: options.id })
+            .subscribe(book => {
+                this._store.dispatch({
+                    type: GET_BOOK_SUCCESS,
+                    payload: [book]
+                });
+                return true;
+            });
+    }
+
     //public search(options) {
     //    return this._bookService.search({ value: options.value })
     //        .subscribe(book => {

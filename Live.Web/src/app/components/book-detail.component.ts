@@ -8,5 +8,5 @@ import { Book } from "../models";
     selector: "book-detail"
 })
 export class BookDetailComponent { 
-    @Input() public entity: any;
+    @Input() public entity: Book;
 }

@@ -15,7 +15,6 @@ import { ServicesModule } from "./services";
 import { StoreModule } from "./store";
 import { PipesModule } from "./pipes";
 
-import { AddBookPageComponent } from "./pages";
 
 const declarables = [
     AppComponent,

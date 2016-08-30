@@ -9,5 +9,6 @@ import { Book } from "../models";
 export class BookListComponent { 
     @Input() entities: Array<Book>;
     @Output() onDelete: EventEmitter<{ value: Book }> = new EventEmitter <{ value: Book }>();
-    @Output() onSelect: EventEmitter<{ value: Book }> = new EventEmitter<{ value: Book }>();    
+    @Output() onSelect: EventEmitter<{ value: Book }> = new EventEmitter<{ value: Book }>();
+    @Output() onEdit: EventEmitter<{ value: Book }> = new EventEmitter<{ value: Book }>();    
 }

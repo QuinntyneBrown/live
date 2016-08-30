@@ -28,6 +28,11 @@ export const routes: Routes = [
     {
         path: 'book/:id',
         component: BookDetailPageComponent
+    },
+    {
+        path: '**',
+        pathMatch: 'full',
+        component: NotFoundPageComponent
     }
 ];
 

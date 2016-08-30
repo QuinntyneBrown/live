@@ -3,5 +3,6 @@
     <div *ngFor="let book of entities | sortBooks ">
         <a (click)="onSelect.emit({ value: book })">{{ book.name}}</a>
         <a (click)="onDelete.emit({ value: book })">DELETE</a>
+        <a (click)="onEdit.emit({ value: book })">EDIT</a>
     </div>
 </div>

@@ -202,6 +202,7 @@
     <Compile Include="Dtos\TokenDto.cs" />
     <Compile Include="Filters\HandleError.cs" />
     <Compile Include="Infrastructure\Constants.cs" />
+    <Compile Include="Migrations\BookConfiguration.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Author.cs" />
     <Compile Include="Models\Book.cs" />
