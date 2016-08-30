@@ -44,4 +44,15 @@ export class BookActions {
                 return true;
             });
     }
+
+    //public search(options) {
+    //    return this._bookService.search({ value: options.value })
+    //        .subscribe(book => {
+    //            this._store.dispatch({
+    //                type: SEARCH_BOOK_SUCCESS,
+    //                payload: options.id
+    //            });
+    //            return true;
+    //        });
+    //}
 }

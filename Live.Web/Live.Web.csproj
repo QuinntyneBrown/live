@@ -230,6 +230,12 @@
     <Content Include="src\app\components\nav.component.scss">
       <DependentUpon>nav.component.ts</DependentUpon>
     </Content>
+    <Content Include="src\app\components\search.component.html">
+      <DependentUpon>search.component.ts</DependentUpon>
+    </Content>
+    <Content Include="src\app\components\search.component.scss">
+      <DependentUpon>search.component.ts</DependentUpon>
+    </Content>
     <Content Include="src\app\pages\add-book-page.component.html">
       <DependentUpon>add-book-page.component.ts</DependentUpon>
     </Content>
@@ -328,6 +334,9 @@
   <ItemGroup>
     <TypeScriptCompile Include="src\app\actions\book.actions.ts" />
     <TypeScriptCompile Include="src\app\actions\index.ts" />
+    <TypeScriptCompile Include="src\app\components\search.component.spec.ts">
+      <DependentUpon>search.component.ts</DependentUpon>
+    </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\constants\add-book-success.action.ts" />
     <TypeScriptCompile Include="src\app\constants\get-book-success.action.ts" />
     <TypeScriptCompile Include="src\app\constants\index.ts" />
@@ -411,6 +420,7 @@
     <TypeScriptCompile Include="src\app\components\add-book-form.component.ts" />
     <TypeScriptCompile Include="src\app\store\store.module.ts" />
     <TypeScriptCompile Include="src\app\pipes\pipes.module.ts" />
+    <TypeScriptCompile Include="src\app\components\search.component.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>
