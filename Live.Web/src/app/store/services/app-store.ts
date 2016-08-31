@@ -20,12 +20,16 @@ export class AppStore {
     private _registerLastAction(actionType:string,newGuid?: string):string {
         newGuid = newGuid || guid();
         this.lastTriggeredAction = actionType;
-        this.lastTriggeredActionId = newGuid;        
+        this.lastTriggeredActionId = newGuid;  
         return newGuid;
     }
 
     select: SelectSignature<AppState> = select.bind(this._store);
-    
+
+    public lastTriggeredAction$: Observable<string> = Observable.of(this.lastTriggeredAction);
+
+    public lastTriggeredActionId$: Observable<string> = Observable.of(this.lastTriggeredActionId);
+
     public lastTriggeredAction: string = null;
 
     public lastTriggeredActionId: string = null;    

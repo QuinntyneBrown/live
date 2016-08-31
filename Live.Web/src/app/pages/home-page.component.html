@@ -1,4 +1,5 @@
 <div class="home-page">
+    
     <book-list [entities]="_store.books$() | async" 
                (onDelete)="_bookActions.remove({ id: $event.value.id })"
                (onSelect)="_router.navigate(['/book', $event.value.id])"></book-list>

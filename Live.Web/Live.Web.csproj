@@ -270,6 +270,10 @@
     <Content Include="typings\globals\slick-carousel\typings.json" />
     <Content Include="webpack.config.js" />
     <Content Include="package.json" />
+    <Content Include="src\assets\index.scss" />
+    <Content Include="src\assets\_breakpoints.scss" />
+    <Content Include="src\assets\_varibles.scss" />
+    <Content Include="src\assets\_normalize.scss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -396,6 +400,7 @@
     <TypeScriptCompile Include="src\app\utilities\extract-data-from-http-response.ts" />
     <TypeScriptCompile Include="src\app\utilities\guid.ts" />
     <TypeScriptCompile Include="src\app\utilities\index.ts" />
+    <TypeScriptCompile Include="src\app\utilities\invoke-async.ts" />
     <TypeScriptCompile Include="src\app\utilities\pluck-out.ts" />
     <TypeScriptCompile Include="src\app\utilities\pluck.ts" />
     <TypeScriptCompile Include="src\main.ts" />
