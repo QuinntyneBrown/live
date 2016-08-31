@@ -338,6 +338,10 @@
   <ItemGroup>
     <TypeScriptCompile Include="src\app\actions\book.actions.ts" />
     <TypeScriptCompile Include="src\app\actions\index.ts" />
+    <TypeScriptCompile Include="src\app\components\backdrop\backdrop.service.ts" />
+    <TypeScriptCompile Include="src\app\components\backdrop\index.ts" />
+    <TypeScriptCompile Include="src\app\components\modal\index.ts" />
+    <TypeScriptCompile Include="src\app\components\modal\modal.service.ts" />
     <TypeScriptCompile Include="src\app\components\search.component.spec.ts">
       <DependentUpon>search.component.ts</DependentUpon>
     </TypeScriptCompile>
@@ -397,12 +401,15 @@
     <TypeScriptCompile Include="src\app\store\services\index.ts" />
     <TypeScriptCompile Include="src\app\store\services\app-store.ts" />
     <TypeScriptCompile Include="src\app\utilities\add-or-update.ts" />
+    <TypeScriptCompile Include="src\app\utilities\append-to-body-async.ts" />
+    <TypeScriptCompile Include="src\app\utilities\extend-css-async.ts" />
     <TypeScriptCompile Include="src\app\utilities\extract-data-from-http-response.ts" />
     <TypeScriptCompile Include="src\app\utilities\guid.ts" />
     <TypeScriptCompile Include="src\app\utilities\index.ts" />
-    <TypeScriptCompile Include="src\app\utilities\invoke-async.ts" />
     <TypeScriptCompile Include="src\app\utilities\pluck-out.ts" />
     <TypeScriptCompile Include="src\app\utilities\pluck.ts" />
+    <TypeScriptCompile Include="src\app\utilities\remove-element.ts" />
+    <TypeScriptCompile Include="src\app\utilities\set-opacity-async.ts" />
     <TypeScriptCompile Include="src\main.ts" />
     <TypeScriptCompile Include="src\vendor.ts" />
     <TypeScriptCompile Include="src\polyfills.ts" />

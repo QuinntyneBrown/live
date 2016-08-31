@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, OnInit } from "@angular/core";
-import { Router } from "@angular/router";
+import { Router, CanActivate } from "@angular/router";
 import { BookActions } from "../actions";
 import { Book } from "../models";
 import { Observable } from "rxjs";
@@ -15,6 +15,9 @@ export class HomePageComponent implements OnInit {
     constructor(
         private _bookActions: BookActions,
         private _router: Router,
-        private _store: AppStore) { }
-    ngOnInit() { this._bookActions.get(); }      
+        private _store: AppStore
+    ) { }
+    ngOnInit() {
+        this._bookActions.get();
+    }  
 }
