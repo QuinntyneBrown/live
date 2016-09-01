@@ -15,7 +15,7 @@
         <span *ngIf="form.get('name').touched && form.hasError('minLength', 'name')">
             Doesn't meet minimum Length
         </span>
-        <textarea placeholder="Purpose" formControlName="purpose"></textarea>                
+        <textarea class="tinymce" placeholder="Purpose" formControlName="purpose"></textarea>                
         <button type="submit" 
                 (click)="onSubmit.emit({ value: this.form.value })"
                 [disabled]="form.invalid">Submit</button>

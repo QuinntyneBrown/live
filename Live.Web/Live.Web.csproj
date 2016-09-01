@@ -199,6 +199,7 @@
   <ItemGroup>
     <Content Include="lib\jquery.min.js" />
     <Content Include="lib\slick.min.js" />
+    <Content Include="lib\tinymce.min.js" />
     <Content Include="packages.config" />
     <Content Include="src\app\app.component.html">
       <DependentUpon>app.component.ts</DependentUpon>
@@ -342,30 +343,12 @@
     <TypeScriptCompile Include="src\app\components\backdrop\index.ts" />
     <TypeScriptCompile Include="src\app\components\modal\index.ts" />
     <TypeScriptCompile Include="src\app\components\modal\modal.service.ts" />
-    <TypeScriptCompile Include="src\app\components\search.component.spec.ts">
-      <DependentUpon>search.component.ts</DependentUpon>
-    </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\constants\add-book-success.action.ts" />
     <TypeScriptCompile Include="src\app\constants\get-book-success.action.ts" />
     <TypeScriptCompile Include="src\app\constants\index.ts" />
     <TypeScriptCompile Include="src\app\constants\remove-book-success.action.ts" />
-    <TypeScriptCompile Include="src\app\app.component.spec.ts">
-      <DependentUpon>app.component.ts</DependentUpon>
-    </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\app.component.ts" />
-    <TypeScriptCompile Include="src\app\components\add-book-form.component.spec.ts">
-      <DependentUpon>add-book-form.component.ts</DependentUpon>
-    </TypeScriptCompile>
-    <TypeScriptCompile Include="src\app\components\book-detail.component.spec.ts">
-      <DependentUpon>book-detail.component.ts</DependentUpon>
-    </TypeScriptCompile>
-    <TypeScriptCompile Include="src\app\components\book-list.component.spec.ts">
-      <DependentUpon>book-list.component.ts</DependentUpon>
-    </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\components\index.ts" />
-    <TypeScriptCompile Include="src\app\components\nav.component.spec.ts">
-      <DependentUpon>nav.component.ts</DependentUpon>
-    </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\environment.ts" />
     <TypeScriptCompile Include="src\app\index.ts" />
     <TypeScriptCompile Include="src\app\models\author.model.ts" />
@@ -373,20 +356,8 @@
     <TypeScriptCompile Include="src\app\models\index.ts" />
     <TypeScriptCompile Include="src\app\models\part.model.ts" />
     <TypeScriptCompile Include="src\app\models\theme.model.ts" />
-    <TypeScriptCompile Include="src\app\pages\add-book-page.component.spec.ts">
-      <DependentUpon>add-book-page.component.ts</DependentUpon>
-    </TypeScriptCompile>
-    <TypeScriptCompile Include="src\app\pages\book-detail-page.component.spec.ts">
-      <DependentUpon>book-detail-page.component.ts</DependentUpon>
-    </TypeScriptCompile>
-    <TypeScriptCompile Include="src\app\pages\home-page.component.spec.ts">
-      <DependentUpon>home-page.component.ts</DependentUpon>
-    </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\pages\home-page.component.ts" />
     <TypeScriptCompile Include="src\app\pages\index.ts" />
-    <TypeScriptCompile Include="src\app\pages\not-found-page.component.spec.ts">
-      <DependentUpon>not-found-page.component.ts</DependentUpon>
-    </TypeScriptCompile>
     <TypeScriptCompile Include="src\app\pipes\index.ts" />
     <TypeScriptCompile Include="src\app\pipes\sort-books.pipe.ts" />
     <TypeScriptCompile Include="src\app\routing\index.ts" />

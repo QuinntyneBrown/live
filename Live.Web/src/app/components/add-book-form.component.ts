@@ -1,8 +1,11 @@
+declare var tinymce: any;
+
 import {
     Component,
     ChangeDetectionStrategy,
     Input,
     Output,
+    OnInit,
     EventEmitter
 } from "@angular/core";
 
@@ -17,7 +20,9 @@ import {
     styles: [require("./add-book-form.component.scss")],
     selector: "add-book-form"
 })
-export class AddBookFormComponent { 
+export class AddBookFormComponent implements OnInit { 
+    ngOnInit() {}
+
     @Output() onSubmit = new EventEmitter();
     public form = new FormGroup({
         index: new FormControl(0, Validators.required),
