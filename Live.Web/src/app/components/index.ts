@@ -1,10 +1,10 @@
 ﻿export * from "./nav";
 
-export * from "./add-book-form";
-export * from "./book-list";
-export * from "./book-list";
+export * from "./book/add-book-form";
+export * from "./book/book-list";
+export * from "./book/book-detail";
+
 export * from "./drop-down";
-export * from "./book-detail";
 export * from "./search";
 
 export * from "./backdrop";

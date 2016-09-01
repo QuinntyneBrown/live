@@ -1,8 +1,12 @@
+using Live.Models;
+
 namespace Live.Data
 {
     public interface IUow
     {
-        IRepository<Models.Book> Books { get; }
+        IRepository<Book> Books { get; }
+        IRepository<Theme> Themes { get; }
+        IRepository<Author> Authors { get; }
         void SaveChanges();
     }
 }

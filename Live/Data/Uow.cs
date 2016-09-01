@@ -1,3 +1,4 @@
+using Live.Models;
 using System;
 
 namespace Live.Data
@@ -25,8 +26,10 @@ namespace Live.Data
             RepositoryProvider = repositoryProvider;
         }
 
-        public IRepository<Models.Book> Books { get { return GetStandardRepo<Models.Book>(); } }
-        
+        public IRepository<Book> Books { get { return GetStandardRepo<Book>(); } }
+        public IRepository<Theme> Themes { get { return GetStandardRepo<Theme>(); } }
+        public IRepository<Author> Authors { get { return GetStandardRepo<Author>(); } }
+
 
         protected void ConfigureDbContext(IDbContext dbContext)
         {

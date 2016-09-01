@@ -1,4 +1,4 @@
-import { Component, ChangeDetectionStrategy, Input, EventEmitter } from "@angular/core";
+import { Component, ChangeDetectionStrategy, Output, Input, EventEmitter } from "@angular/core";
 import { DropDownElement } from "./drop-down-element";
 
 @Component({
@@ -13,7 +13,7 @@ export class DropDownComponent<T> {
 
     @Input("options") set options(value: DropDownElement<T>[]) {
         this._options = [];
-        for (var i = 0; i < value.length; i++) {
+        for (let i = 0; i < value.length; i++) {
             this._options.push({
                 id: i,
                 displayLabel: value[i].displayLabel,
@@ -31,7 +31,9 @@ export class DropDownComponent<T> {
         }
     }
 
-    public value: EventEmitter<T> = new EventEmitter<T>();
+    
+
+    @Output() public value: EventEmitter<T> = new EventEmitter<T>();
     private _options: DropDownElement<T>[];
     public selectedElement: DropDownElement<T>;
 
@@ -42,13 +44,13 @@ export class DropDownComponent<T> {
     }
 
     onSelect(id: string) {
-        var element = this._options.find(e => e.id.toString() === id);
+        const element = this._options.find(e => e.id.toString() === id);
         this.selectedElement = element;
         this.value.emit(element.value);
     }
 
     onSelectValue(value: T) {
-        var element = this._options.find(e => e.value === value);
+        const element = this._options.find(e => e.value === value);
         this.selectedElement = element;
         this.value.emit(element.value);
     }

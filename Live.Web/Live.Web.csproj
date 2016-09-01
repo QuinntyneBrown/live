@@ -207,22 +207,22 @@
     <Content Include="src\app\app.component.scss">
       <DependentUpon>app.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\components\add-book-form\add-book-form.component.html">
+    <Content Include="src\app\components\book\add-book-form\add-book-form.component.html">
       <DependentUpon>add-book-form.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\components\add-book-form\add-book-form.component.scss">
+    <Content Include="src\app\components\book\add-book-form\add-book-form.component.scss">
       <DependentUpon>add-book-form.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\components\book-detail\book-detail.component.html">
+    <Content Include="src\app\components\book\book-detail\book-detail.component.html">
       <DependentUpon>book-detail.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\components\book-detail\book-detail.component.scss">
+    <Content Include="src\app\components\book\book-detail\book-detail.component.scss">
       <DependentUpon>book-detail.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\components\book-list\book-list.component.html">
+    <Content Include="src\app\components\book\book-list\book-list.component.html">
       <DependentUpon>book-list.component.ts</DependentUpon>
     </Content>
-    <Content Include="src\app\components\book-list\book-list.component.scss">
+    <Content Include="src\app\components\book\book-list\book-list.component.scss">
       <DependentUpon>book-list.component.ts</DependentUpon>
     </Content>
     <Content Include="src\app\components\drop-down\drop-down.component.html">
@@ -345,21 +345,21 @@
   <ItemGroup>
     <TypeScriptCompile Include="src\app\actions\book.actions.ts" />
     <TypeScriptCompile Include="src\app\actions\index.ts" />
-    <TypeScriptCompile Include="src\app\components\add-book-form\index.ts" />
+    <TypeScriptCompile Include="src\app\components\book\add-book-form\index.ts" />
     <TypeScriptCompile Include="src\app\components\backdrop\backdrop.service.ts" />
     <TypeScriptCompile Include="src\app\components\backdrop\index.ts" />
-    <TypeScriptCompile Include="src\app\components\book-detail\index.ts" />
-    <TypeScriptCompile Include="src\app\components\book-list\index.ts" />
+    <TypeScriptCompile Include="src\app\components\book\book-detail\index.ts" />
+    <TypeScriptCompile Include="src\app\components\book\book-list\index.ts" />
     <TypeScriptCompile Include="src\app\components\drop-down\drop-down-element.ts" />
     <TypeScriptCompile Include="src\app\components\drop-down\index.ts" />
     <TypeScriptCompile Include="src\app\components\modal\index.ts" />
     <TypeScriptCompile Include="src\app\components\modal\modal.service.ts" />
     <TypeScriptCompile Include="src\app\components\nav\index.ts" />
     <TypeScriptCompile Include="src\app\components\search\index.ts" />
-    <TypeScriptCompile Include="src\app\constants\add-book-success.action.ts" />
-    <TypeScriptCompile Include="src\app\constants\get-book-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\book\add-book-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\book\get-book-success.action.ts" />
     <TypeScriptCompile Include="src\app\constants\index.ts" />
-    <TypeScriptCompile Include="src\app\constants\remove-book-success.action.ts" />
+    <TypeScriptCompile Include="src\app\constants\book\remove-book-success.action.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\components\index.ts" />
     <TypeScriptCompile Include="src\app\environment.ts" />
@@ -405,8 +405,8 @@
     <TypeScriptCompile Include="typings\index.d.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
     <TypeScriptCompile Include="src\app\pages\not-found-page.component.ts" />
-    <TypeScriptCompile Include="src\app\components\book-list\book-list.component.ts" />
-    <TypeScriptCompile Include="src\app\components\book-detail\book-detail.component.ts" />
+    <TypeScriptCompile Include="src\app\components\book\book-list\book-list.component.ts" />
+    <TypeScriptCompile Include="src\app\components\book\book-detail\book-detail.component.ts" />
     <TypeScriptCompile Include="src\app\pages\book-detail-page.component.ts" />
     <TypeScriptCompile Include="src\app\components\components.module.ts" />
     <TypeScriptCompile Include="src\app\routing\routing.module.ts" />
@@ -414,7 +414,7 @@
     <TypeScriptCompile Include="src\app\services\services.module.ts" />
     <TypeScriptCompile Include="src\app\components\nav\nav.component.ts" />
     <TypeScriptCompile Include="src\app\pages\add-book-page.component.ts" />
-    <TypeScriptCompile Include="src\app\components\add-book-form\add-book-form.component.ts" />
+    <TypeScriptCompile Include="src\app\components\book\add-book-form\add-book-form.component.ts" />
     <TypeScriptCompile Include="src\app\store\store.module.ts" />
     <TypeScriptCompile Include="src\app\pipes\pipes.module.ts" />
     <TypeScriptCompile Include="src\app\components\search\search.component.ts" />

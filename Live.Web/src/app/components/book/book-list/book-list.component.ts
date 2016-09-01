@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, Input, OnInit, Output, EventEmitter } from "@angular/core";
-import { Book } from "../../models";
+import { Book } from "../../../models";
 
 @Component({
     template: require("./book-list.component.html"),

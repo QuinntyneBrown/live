@@ -20,7 +20,11 @@ namespace Live
             container.RegisterType<ICacheProvider, CacheProvider>();
             container.RegisterType<IEncryptionService, EncryptionService>();
             container.RegisterType<ILogger, Logger>();
+
             container.RegisterType<IBookService, BookService>();
+            container.RegisterType<IThemeService, ThemeService>();
+            container.RegisterType<IAuthorService, AuthorService>();
+
             container.RegisterInstance(AuthConfiguration.LazyConfig);            
             return container;
         }

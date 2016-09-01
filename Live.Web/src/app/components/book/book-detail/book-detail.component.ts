@@ -1,5 +1,5 @@
 import { Component, ChangeDetectionStrategy, Input, OnInit } from "@angular/core";
-import { Book } from "../../models";
+import { Book } from "../../../models";
 
 
 @Component({

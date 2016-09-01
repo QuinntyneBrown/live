@@ -228,6 +228,18 @@
     <Compile Include="Utilities\ILoggerProvider.cs" />
     <Compile Include="Utilities\Logger.cs" />
     <Compile Include="Utilities\LoggerFactory.cs" />
+    <Compile Include="Dtos\ThemeDto.cs" />
+    <Compile Include="Dtos\ThemeAddOrUpdateRequestDto.cs" />
+    <Compile Include="Dtos\ThemeAddOrUpdateResponseDto.cs" />
+    <Compile Include="Dtos\AuthorDto.cs" />
+    <Compile Include="Dtos\AuthorAddOrUpdateRequestDto.cs" />
+    <Compile Include="Dtos\AuthorAddOrUpdateResponseDto.cs" />
+    <Compile Include="Services\ThemeService.cs" />
+    <Compile Include="Services\IThemeService.cs" />
+    <Compile Include="Services\AuthorService.cs" />
+    <Compile Include="Services\IAuthorService.cs" />
+    <Compile Include="Controllers\ThemeController.cs" />
+    <Compile Include="Controllers\AuthorController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

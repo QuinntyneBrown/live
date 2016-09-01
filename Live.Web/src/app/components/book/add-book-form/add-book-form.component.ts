@@ -1,5 +1,3 @@
-declare var tinymce: any;
-
 import {
     Component,
     ChangeDetectionStrategy,
