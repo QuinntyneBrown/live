@@ -8,8 +8,10 @@ import {
     AddBookFormComponent,
     BookListComponent,
     BookDetailComponent,
+    DropDownComponent,
     NavComponent,
 
+    BackdropService,
     ModalService
 } from './';
 
@@ -17,10 +19,11 @@ const declarables = [
     AddBookFormComponent,
     BookDetailComponent,
     BookListComponent,
+    DropDownComponent,
     NavComponent
 ];
 
-export const providers = [ModalService];
+export const providers = [BackdropService, ModalService];
 
 @NgModule({
     imports: [PipesModule, CommonModule, RouterModule, ReactiveFormsModule],

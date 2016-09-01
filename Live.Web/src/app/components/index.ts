@@ -1,10 +1,11 @@
-﻿export * from "./nav.component";
+﻿export * from "./nav";
 
-export * from "./add-book-form.component";
-export * from "./book-list.component";
-export * from "./book-list.component";
-export * from "./book-detail.component";
-export * from "./search.component";
+export * from "./add-book-form";
+export * from "./book-list";
+export * from "./book-list";
+export * from "./drop-down";
+export * from "./book-detail";
+export * from "./search";
 
 export * from "./backdrop";
 export * from "./modal";
