@@ -1,5 +1,7 @@
 ﻿export * from "./add-or-update";
 export * from "./append-to-body-async";
+export * from "./create-element";
+export * from "./extend-css-async";
 export * from "./extract-data-from-http-response";
 export * from "./pluck";
 export * from "./pluck-out";

@@ -1,6 +1,12 @@
 ﻿import { Injectable } from "@angular/core";
 
-import { appendToBodyAsync, removeElement, setOpacityAsync, extendCssAsync } from "../../utilities";
+import {
+    appendToBodyAsync,
+    createElement,
+    removeElement,
+    setOpacityAsync,
+    extendCssAsync
+} from "../../utilities";
 
 
 @Injectable()
@@ -27,9 +33,9 @@ export class BackdropService {
 
     public initializeAsync = () => {
         return new Promise(resolve => {
-            this.augmentedJQuery = $("<div></div>");
+            this.nativeElement = createElement();
             extendCssAsync({
-                nativeHTMLElement: this.nativeElement,
+                nativeElement: this.nativeElement,
                 cssObject: {
                     "-webkit-transition": "opacity 300ms ease-in-out",
                     "-o-transition": "opacity 300ms ease-in-out",
@@ -56,12 +62,10 @@ export class BackdropService {
 
     public dispose = () => {
         removeElement({ nativeElement: this.nativeElement });
-        this.augmentedJQuery = null;
+        this.nativeElement = null;
     }
 
-    public get nativeElement(): HTMLElement { return this.augmentedJQuery[0]; }
-
-    public augmentedJQuery: any;
+    public nativeElement:HTMLElement;    
 
     public isOpen: boolean = false;
 
