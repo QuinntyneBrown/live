@@ -1,13 +1,11 @@
-﻿import { Injectable } from "@angular/core";
-import { Store } from "@ngrx/store";
+﻿import { Store } from "@ngrx/store";
 import { BookService } from "../services";
-import { AppState, AppStore } from "../store";
+import { AppState, AppStore } from "../reducers";
 import { ADD_BOOK_SUCCESS, GET_BOOK_SUCCESS, REMOVE_BOOK_SUCCESS } from "../constants";
 import { Book } from "../models";
 import { Observable } from "rxjs";
 import { guid } from "../utilities";
 
-@Injectable()
 export class BookActions {
     constructor(private _bookService: BookService, private _store: AppStore) { }
 

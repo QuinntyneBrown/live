@@ -6,8 +6,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProductVersion>
-    </ProductVersion>
+    <ProductVersion></ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{658DA84D-AD6C-414A-9333-B89232911187}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
@@ -22,8 +21,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
-    <NuGetPackageImportStamp>
-    </NuGetPackageImportStamp>
+    <NuGetPackageImportStamp></NuGetPackageImportStamp>
     <TypeScriptToolsVersion>1.8</TypeScriptToolsVersion>
     <TypeScriptEmitDecoratorMetadata>true</TypeScriptEmitDecoratorMetadata>
     <TypeScriptModuleKind>commonjs</TypeScriptModuleKind>
@@ -321,8 +319,7 @@
           <IISUrl>http://localhost:56622/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
-          <CustomServerUrl>
-          </CustomServerUrl>
+          <CustomServerUrl></CustomServerUrl>
           <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
         </WebProjectProperties>
       </FlavorProperties>
@@ -356,10 +353,8 @@
     <TypeScriptCompile Include="src\app\common\components\modal\modal.service.ts" />
     <TypeScriptCompile Include="src\app\common\components\nav\index.ts" />
     <TypeScriptCompile Include="src\app\common\components\search\index.ts" />
-    <TypeScriptCompile Include="src\app\common\constants\book\add-book-success.action.ts" />
-    <TypeScriptCompile Include="src\app\common\constants\book\get-book-success.action.ts" />
+    <TypeScriptCompile Include="src\app\common\constants\book.constants.ts" />
     <TypeScriptCompile Include="src\app\common\constants\index.ts" />
-    <TypeScriptCompile Include="src\app\common\constants\book\remove-book-success.action.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\common\components\index.ts" />
     <TypeScriptCompile Include="src\app\common\selectors\index.ts" />
@@ -407,17 +402,14 @@
     <TypeScriptCompile Include="src\app\common\components\book\book-list\book-list.component.ts" />
     <TypeScriptCompile Include="src\app\common\components\book\book-detail\book-detail.component.ts" />
     <TypeScriptCompile Include="src\app\books\book-detail-page.component.ts" />
-    <TypeScriptCompile Include="src\app\common\components\components.module.ts" />
     <TypeScriptCompile Include="src\app\routing.module.ts" />
-    <TypeScriptCompile Include="src\app\common\actions\actions.module.ts" />
-    <TypeScriptCompile Include="src\app\common\services\services.module.ts" />
     <TypeScriptCompile Include="src\app\common\components\nav\nav.component.ts" />
     <TypeScriptCompile Include="src\app\books\add-book-page.component.ts" />
     <TypeScriptCompile Include="src\app\common\components\book\add-book-form\add-book-form.component.ts" />
-    <TypeScriptCompile Include="src\app\common\store\store.module.ts" />
     <TypeScriptCompile Include="src\app\common\pipes\pipes.module.ts" />
     <TypeScriptCompile Include="src\app\common\components\search\search.component.ts" />
     <TypeScriptCompile Include="src\app\common\components\drop-down\drop-down.component.ts" />
+    <TypeScriptCompile Include="src\app\home\index.ts" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.targets')" />
 </Project>
